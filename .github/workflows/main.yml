@@ -21,9 +21,9 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4   # 👈 actualizado a v4
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: .   # publica los archivos de la raíz
+          path: .   # publica la raíz del repo
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
