@@ -15,6 +15,7 @@ Este proyecto demuestra:
 
 ![Homepage](screenshot-homepage.png)
 
+
 ## URL del proyecto
 
 [Ver página online](https://arcenerea.github.io/ci-cd-demo/)
