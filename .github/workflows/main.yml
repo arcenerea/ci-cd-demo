@@ -3,7 +3,7 @@ name: Deploy static site to GitHub Pages
 on:
   push:
     branches:
-      - main   # Se ejecuta cada vez que hagas push a la rama main
+      - main
 
 permissions:
   contents: read
@@ -14,17 +14,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout código
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Configurar Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Subir archivos a Pages
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: .   # Publica todo lo que está en la raíz del repo
+          path: .  # publica los archivos de la raíz
 
-      - name: Deploy en GitHub Pages
-        id: deployment
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
